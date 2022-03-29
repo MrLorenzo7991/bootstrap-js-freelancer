@@ -46,6 +46,8 @@ function calcoloPrezzo(ore, commissione, dirittoSconto){
     let prezzofinale = ore*commissione;
     if(dirittoSconto){
         prezzofinale = prezzofinale*sconto;
+    } else {
+        alert("Il codice sconto inserito non è valido o è già stato usato, non verrà applicato nessuno sconto.")
     }
     return(prezzofinale)
 }
