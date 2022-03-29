@@ -3,13 +3,14 @@ const commissioneFrontend = 15.3;
 const commissioneAnalisi = 33.6;
 let codiciScontoValidi = ["YHDNU32", "JANJC63", "PWKCN25", "SJDPO96", "POCIE24"]
 const sconto = 0.75;
+let codiceSconto;
 
 
 function submitForm(event){
     event.preventDefault();
     let oreRichieste = parseInt(document.getElementById("hoursRequest").value);
     let tipoLavoro = document.getElementById("typeOfWork").value;
-    let codiceSconto = document.getElementById("discountCode").value;
+    codiceSconto = document.getElementById("discountCode").value;
     let flagSconto = checkSconto(codiceSconto);
     let commissione = calcoloCommissione(tipoLavoro);
     let prezzofinale = calcoloPrezzo(oreRichieste, commissione , flagSconto).toFixed(2);
@@ -35,6 +36,7 @@ function checkSconto(codice){
     for(i=0; i < codiciScontoValidi.length; i++){
         if(codice == codiciScontoValidi[i]){
             flagSconto = true;
+            codiciScontoValidi.splice(i,1);
             break
         }
     }
@@ -46,8 +48,11 @@ function calcoloPrezzo(ore, commissione, dirittoSconto){
     let prezzofinale = ore*commissione;
     if(dirittoSconto){
         prezzofinale = prezzofinale*sconto;
+        document.getElementById("discountCode").style.color = "black";
+        alert("È stato applicato uno sconto del 25% utilizzando il codice sconto: " + codiceSconto)
     } else {
         alert("Il codice sconto inserito non è valido o è già stato usato, non verrà applicato nessuno sconto.")
+        document.getElementById("discountCode").style.color = "red";
     }
     return(prezzofinale)
 }
