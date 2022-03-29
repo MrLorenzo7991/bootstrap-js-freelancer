@@ -11,6 +11,7 @@ submitButton.addEventListener("click", submitForm(e){
 
 function submitForm(event){
     event.preventeDefault();
-    let oreRichieste = document.getElementById("")
+    let oreRichieste = document.getElementById("hoursRequest").value;
+    let tipoDiLavoro = document.getElementById("typeOfWork").value
 
 }
