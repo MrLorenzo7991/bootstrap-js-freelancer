@@ -15,8 +15,8 @@
                 <div class="col">
                     <p class="text-start text-info mx-5">Portfolio</p>
                 </div>                                
-                <div class="col">
-                    <p class="text-end text-info mx-5"><u>Contact me</u></p>
+                <div class="col text-end">
+                    <a href="https://www.youtube.com/" class="text-info m-5">Contact me</a>
                 </div>
             </div>
         </div>
@@ -74,7 +74,7 @@
             <!--Seconda riga-->
             
                 <!--Game-->
-                <div class="col-xl-4 col-md-6 col-12 mt-3">
+                <div class="col-xl-4 col-md-6 col-12 mt-4">
                     <div class="card" style="width: 100%">
                         <img src="img/game.png" class="card-img-top" alt="Foto cabina">
                         <div class="card-body">
@@ -85,7 +85,7 @@
                       </div>
                 </div>
                 <!--Safe-->
-                <div class="col-xl-4 col-md-6 col-12 mt-3">
+                <div class="col-xl-4 col-md-6 col-12 mt-4">
                     <div class="card" style="width: 100%">
                         <img src="img/safe.png" class="card-img-top" alt="Foto cabina">
                         <div class="card-body">
@@ -96,7 +96,7 @@
                       </div>
                 </div>
                 <!--Submarine-->
-                <div class="col-xl-4 col-md-6 col-12 mt-3">
+                <div class="col-xl-4 col-md-6 col-12 mt-4">
                     <div class="card" style="width: 100%">
                         <img src="img/submarine.png" class="card-img-top" alt="Foto cabina">
                         <div class="card-body">
@@ -119,19 +119,19 @@
                         <form class="row g-3" onsubmit="submitForm(event)">
                             <div class="col-md-6">
                               <label for="firstName" class="form-label">First name</label>
-                              <input type="text" class="form-control" id="firstName">
+                              <input type="text" class="form-control" id="firstName" placeholder="Insert here your first name" required>
                             </div>
                             <div class="col-md-6">
                               <label for="lastName" class="form-label">Last name</label>
-                              <input type="text" class="form-control" id="lastName">
+                              <input type="text" class="form-control" id="lastName" placeholder="Insert here your last name" required>
                             </div>
                             <div class="col-md-6">
                                 <label for="emailUtente" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="emailUtente">
+                                <input type="email" class="form-control" id="emailUtente" placeholder="Insert here your e-mail address" required>
                               </div>
                               <div class="col-md-6">
                                 <label for="hoursRequest" class="form-label">Hours request</label>
-                                <input type="number" min="1" class="form-control" id="hoursRequest">
+                                <input type="number" min="1" class="form-control" id="hoursRequest" placeholder="How many hours of work do you require?" required>
                               </div>
                               <div class="col-md-6">
                                 <label for="typeOfWork" class="form-label">Type of work</label>
@@ -143,7 +143,7 @@
                               </div>
                               <div class="col-md-6">
                                 <label for="discountCode" class="form-label">Discount Code</label>
-                                <input type="text" class="form-control" id="discountCode">
+                                <input type="text" class="form-control" id="discountCode" placeholder="Notice: the code is case sensitive">
                               </div>
                             <div class="col-12">
                               <label for="message" class="form-label">Message</label>
