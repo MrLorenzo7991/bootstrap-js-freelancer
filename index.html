@@ -116,7 +116,7 @@
                 </div>
                 <div class="row">
                     <div class="col-9 mx-auto">
-                        <form class="row g-3">
+                        <form class="row g-3" onsubmit="submitForm(event)">
                             <div class="col-md-6">
                               <label for="firstName" class="form-label">First name</label>
                               <input type="text" class="form-control" id="firstName">
@@ -150,7 +150,7 @@
                               <textarea class="form-control" id="message" rows="4"></textarea>
                             </div>
                             <div class="col-12 text-center">
-                              <button type="submit" class="btn btn-warning" onsubmit="submitForm(event)">Sign in</button>
+                              <button type="submit" class="btn btn-warning">Sign in</button>
                             </div>
                             <div class="col-12">
                                 <p id="prezzoFinale"></p>
