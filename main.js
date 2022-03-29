@@ -46,13 +46,15 @@ function checkSconto(codice){
 //Calcolo prezzo
 function calcoloPrezzo(ore, commissione, dirittoSconto){
     let prezzofinale = ore*commissione;
-    if(dirittoSconto){
-        prezzofinale = prezzofinale*sconto;
-        document.getElementById("discountCode").style.color = "black";
-        alert("È stato applicato uno sconto del 25% utilizzando il codice sconto: " + codiceSconto)
-    } else {
-        alert("Il codice sconto inserito non è valido o è già stato usato, non verrà applicato nessuno sconto.")
-        document.getElementById("discountCode").style.color = "red";
+    if (codiceSconto != ""){
+        if(dirittoSconto){
+            prezzofinale = prezzofinale*sconto;
+            document.getElementById("discountCode").style.color = "black";
+            alert("È stato applicato uno sconto del 25% utilizzando il codice sconto: " + codiceSconto)
+        } else {
+            alert("Il codice sconto inserito non è valido o è già stato usato, non verrà applicato nessuno sconto.")
+            document.getElementById("discountCode").style.color = "red";
+        }
     }
     return(prezzofinale)
 }
